@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -o xtrace
 
 if [[ ! ( # any of the following are not true
         # 1st arg is an existing regular file
