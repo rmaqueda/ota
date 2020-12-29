@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
+set -o xtrace
 
 if [[ ! ( # any of the following are not true
         # 1st arg is an existing regular file
-        -f "$1" &&
-        # ...and it has a .ipa extension
-        "${1##*.}" == "ipa" &&
+        -n "$1" &&
         # 2nd arg is a non-empty string
         -n "$2"
         ) ]];
     then
-        echo "    Usage: $(basename "$0") file.ipa url"
+        echo "    Usage: $0 file.ipa url"
     exit;
 fi
 
@@ -18,7 +17,7 @@ set -o nounset
 ## Exit if any statement returns a non-true return value (non-zero)
 set -o errexit
 ## Announce commands
-set -o xtrace
+#set -o xtrace
 
 realpath(){
     echo "$(cd "$(dirname "$1")"; echo -n "$(pwd)/$(basename "$1")")";
