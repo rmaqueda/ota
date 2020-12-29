@@ -1,6 +1,6 @@
 ## OTA
 
-Bash script to create plist and HTML file for **Over the air IPA deploy**.
+Bash script to create PLIST and HTML file for **Over the air IPA deploy**.
 
 Original script [here](https://github.com/RichardBronosky/ota-tools)
 
